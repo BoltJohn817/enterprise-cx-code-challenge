@@ -1,5 +1,4 @@
-import { Flex, Select } from "antd";
-import Compact from "antd/es/space/Compact";
+import { Flex, Select, Space } from "antd";
 
 const sortOptions = [
   { value: "apy", label: "Annual Percentage Yield" },
@@ -38,7 +37,7 @@ export const Controllers = ({
         value={filter}
         onChange={onChange("filter")}
       />
-      <Compact>
+      <Space.Compact>
         <Select
           options={sortOptions}
           value={sort}
@@ -49,7 +48,7 @@ export const Controllers = ({
           value={order}
           onChange={onChange("order")}
         />
-      </Compact>
+      </Space.Compact>
     </Flex>
   );
 };
